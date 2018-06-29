@@ -6,15 +6,19 @@ import Footer from '../../Footer'
 import config from '../../../configs/portfolio-data.js'
 
 let links = []
+let template = []
 
 function getLinks() {
+  let i = 0;
   config.category.map(item => {
     return item.imgs.map(item => {
+      template.push(`portfolio-example-${++i}`)
       return links.push(item.title)
     })
   })  
 }
-console.log('links:',links)
+getLinks()
+console.log('template:',template)
 
 class ExamplePage extends Component {
   constructor (props) {
@@ -28,10 +32,7 @@ class ExamplePage extends Component {
   	this.setState({
   		pathname: window.location.pathname
   	})
-    getLinks()
-    //let a = document.querySelectorAll('.navigation a')
-    //console.log('aaaaaaa:',a)
-    //a.forEach( item => item.classList.remove('bounceInLeft'))
+    console.log(links)
   }
 
   render () {
@@ -99,7 +100,7 @@ class ExamplePage extends Component {
   getData() {
     let {pathname} = this.state
     let a = decodeURI(pathname).split('/')
-    let clientName = (a[a.length - 1])
+    let clientName = links[template.indexOf(a[a.length - 1])]
     console.log('client name:', clientName)
     let categoryTitle = null
     let {category} = config
@@ -134,13 +135,13 @@ const Navigator = (props) => {
   return (
     <div className='navigation-block'>
       <div className='prev-example'>
-        <Link to={`${props.url}/${links[current - 1]}`}>
+        <Link to={`${props.url}/${template[current-1]}`}>
           <span className='btn-icon'><i className='material-icons'>keyboard_arrow_left</i></span>
           <span>Previous</span>
         </Link>
       </div>
       <div className='next-example'>
-        <Link to={`${props.url}/${links[current + 1]}`}>
+        <Link to={`${props.url}/${template[current + 1]}`}>
           <span className='btn-icon'><i className='material-icons'>keyboard_arrow_right</i></span>
           <span>Next</span>
         </Link>

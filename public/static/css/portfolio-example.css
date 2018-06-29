@@ -1,0 +1,245 @@
+.portfolio-example h1 {
+    font-size: 38px;
+}
+
+.portfolio-example-info {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.example-image-wrapper {
+    width: 292px;
+}
+
+.info-image {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 225px;
+    box-shadow: 0 0 15px #0C676E;
+}
+
+.info-image img {
+    display: block;
+    height: 400px;
+    width: 225px;
+    cursor: pointer;  
+}
+
+.info-image img {
+}
+
+.info-image .overlay {
+    cursor: pointer;
+    width: 225px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.info-image:hover .overlay {
+    opacity: 1;
+    padding: 15px 15px;
+    transition: opacity 0.5s;
+    
+}
+
+.info-image .overlay .example-link {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    background: #0C676E;
+    box-shadow: 0 0 10px 0 #0C676E;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.example-order-block {
+    align-self: stretch;
+    position: relative;
+    width: 262px;
+}
+
+a.example-order-link {
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background: #0C676E;
+    box-shadow: 0 0 10px 0 #0C676E;
+    position: absolute;
+    bottom: 0;
+}
+
+a.example-order-link:hover {
+    box-shadow: 0 0 15px 0 #0C676E;
+}
+
+.example-qr {
+    align-self: flex-end;
+}
+
+.example-qr a {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 250px;
+    text-overflow: ellipsis;
+}
+
+.example-qr .example-link {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #0C676E;
+    font-weight: 700;
+}
+
+.qr-description-title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.qr-description {
+   display: inline-block;
+    padding-left: 30px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.example-qr img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.example-description {
+    width: calc(100% - 262px*2);
+    width: calc(262px*2 + 30px);
+    margin-left: -30px;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.example-description-column {
+    display: inline-block;
+    padding: 0;
+    margin-right: 30px;
+    text-align: center;
+    width: 150px;
+}
+
+.example-qr img, .example-description-column {
+    width: 131px;
+}
+
+.example-description-column {
+    width: 50%;
+    margin: 0;
+}
+
+.parameter-title {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.parameter-title i {
+    display: block;
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: #0C676E;
+}
+
+.parameter-title span {
+    color: #0C676E;
+    text-shadow: 0 0 1px #0C676E;;
+}
+
+.parameter-value {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.navigation-block {
+    display: flex;
+    justify-content: center;
+}
+
+.prev-example, .next-example {
+    display: inline-block;
+    margin: 0 0;
+    text-align: center;
+}
+
+.navigation-block a {
+    display: block;
+    width: 115px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navigation-block a i {
+    display: block;
+    font-size: 70px;
+}
+
+.navigation-block  .btn-icon {
+/*    border: 1px solid #fff;*/
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.navigation-block a:hover .btn-icon {
+/*    box-shadow: 0 0 5px #fff;*/
+    background: #8083843b;
+    box-shadow: 0 0 10px 0px #8083843b;
+}
+
+.navigation-block a:hover {
+    text-shadow: 0 0 1px #fff;
+}
+
+
+
+
+
+
+
+
+
